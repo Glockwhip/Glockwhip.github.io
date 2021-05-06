@@ -1,0 +1,126 @@
+@font-face{
+    font-family: 'Padaloma';
+    src: url('fonts/Padaloma.woff2') format('woff2'),
+        url('fonts/Padaloma.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face{
+    font-family: 'DINEngschrift';
+    src: url('fonts/DINEngschrift.woff2') format('woff2'),
+        url('fonts/DINEngschrift.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+.flex-container{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    height:100vh;
+}
+
+.title-box{
+    display: block;
+    height:10%;
+}
+
+.title{
+    font-family: "Padaloma";
+    text-align: center;
+    box-sizing: border-box;
+    color : #489fe6;
+    font-size: 5vw;
+
+    filter : drop-shadow(0 0 0.3vw #58abe2d0); 
+}
+
+.space{
+    height:35%
+}
+
+button{
+    background: #1F4720;
+    background: -moz-linear-gradient(45deg, #1F4720 0%, #4CAF50 39%, #1F4720 100%);
+    background: -webkit-linear-gradient(45deg, #1F4720 0%, #4CAF50 39%, #1F4720 100%);
+    background: linear-gradient(45deg, #1F4720 0%, #4CAF50 39%, #1F4720 100%);
+
+    border: 0.25vw solid #54ac58;
+
+    font-family:'DINEngschrift';
+    letter-spacing: 0.4vw;
+    color: #99ee9e;
+    padding: 1.75vw 7vw;
+    text-align: center;
+    font-size: 4.5vw;
+    text-shadow: 0.35vw 0.35vw 0.3vw  #00000081;
+
+    text-decoration: none;
+    display: inline-block;
+
+}
+
+button:hover{
+    filter : drop-shadow(0 0 0.70rem #b6e4b949);
+}
+
+.tag-box{
+    
+    background-color:rgba(0, 0, 0, 0.397);
+    height: 8vw;
+    width: 28vw;
+    margin-top: 0;
+}
+
+.tag{
+    font-size: 4vw;
+    font-family:'DINEngschrift';
+    margin-top: 2vw;
+    color: #3e97e0;
+    text-align: center;
+}
+
+body {
+    background: #000000;
+    background-image: url("bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media all and (max-width: 600px){
+    .title{
+        font-size: 10vw;
+    
+        filter : drop-shadow(0 0 0.7vw #58abe2d0); 
+    }
+
+    button{
+        border: 0.25vw solid #54ac58;
+        letter-spacing: 1vw;
+        padding: 3.75vw 15vw;
+        font-size: 9.65vw;
+        text-shadow: 0.5vw 0.5vw 0.6vw  #00000081;
+    }
+
+    button:hover{
+        filter : drop-shadow(0 0 0.80rem #b6e4b949);
+    }
+
+    .tag-box{
+        height: 17.8vw;
+        width: 62vw;
+    }
+    
+    .tag{
+        font-size: 9vw;
+        margin-top: 4vw;
+    }
+
+
+
+}
