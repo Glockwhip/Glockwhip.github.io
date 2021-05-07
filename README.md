@@ -3,4 +3,4 @@
 
 
 A faire : 
->Ajouter une animation de transition à chaque clique
+>Ajouter une animation de transition à chaque clic
