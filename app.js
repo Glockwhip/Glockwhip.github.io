@@ -19,6 +19,7 @@ function generateTagBox(){
 
     var tag = document.createElement('p');
     tag.setAttribute("class", "tag");
+    tag.setAttribute("id", "tag")
     var contenu = document.createTextNode(tagRandom());
     tag.appendChild(contenu);
     tagBox.appendChild(tag);
@@ -32,12 +33,19 @@ function showResult(){
 
 
     if(document.getElementById("tag-box") == undefined){
-        flexContainer.appendChild(generateTagBox())       
-
-    }else{  
-        flexContainer.replaceChild(generateTagBox(),document.getElementById("tag-box")); 
-    }
+        flexContainer.appendChild(generateTagBox());      
     
+    }else if (document.getElementById("tag") == undefined){
+        //pass
+
+    }else{ 
+        var oldTagBox = document.getElementById("tag-box");
+        var oldTag = document.getElementById("tag");
+        oldTagBox.removeChild(oldTag); 
+
+        /*setTimeout de 50ms pour la transition*/
+        setTimeout(() => {flexContainer.replaceChild(generateTagBox(),document.getElementById("tag-box"));}, 75); 
+    }
 }
 
 function playSound(){
